@@ -105,6 +105,7 @@ function colorFor(feature) {
 let zoneLayer = null;
 let diffLayer = null;
 let dotsLayer = null;
+let didFit = false;   // fit the view to the full district once, on first load
 
 function getPlan() { return document.querySelector('input[name="plan"]:checked').value; }
 function getLevel() { return document.querySelector('input[name="level"]:checked').value; }
@@ -134,6 +135,8 @@ async function loadZones() {
   const schoolToColor = {};
   gj.features.forEach(f => { schoolToColor[f.properties.school] = colorFor(f); });
   updateLegend(schoolNames, schoolToColor);
+  // On first load, frame the entire district so nothing is cut off at the edges.
+  if (!didFit) { map.fitBounds(zoneLayer.getBounds(), { padding: [15, 15] }); didFit = true; }
 }
 
 function resolveDiffPair() {
