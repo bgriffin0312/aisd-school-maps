@@ -39,19 +39,18 @@
 <div id="panel">
   <h1>AISD Attendance Boundaries</h1>
   <div class="disclaimer">
-    <strong>Illustrative scenarios — not a proposed map.</strong>
-    These boundary sets are analytical examples showing what is achievable under
-    different priorities. They are existence proofs for a policy conversation, not
-    a boundary plan being advocated for adoption.
+    <strong>Illustrative scenario — not a proposed map.</strong>
+    The deconcentration scenario shown here is an analytical example of what is
+    achievable — an existence proof for a policy conversation, not a boundary plan
+    being advocated for adoption. "Current" and "Scenario 14" are Austin ISD's own
+    boundary sets, shown for comparison.
   </div>
   <p class="meta">Analysis using AISD shapefiles, ACS 2018–22, and TEA 2024–25 data.</p>
 
   <h2>Boundary set</h2>
   <label><input type="radio" name="plan" value="pre" checked> Current boundaries</label>
   <label><input type="radio" name="plan" value="scenario14"> Scenario 14 (AISD's draft redraw)</label>
-  <label><input type="radio" name="plan" value="ed_first"> ED-first (illustrative)</label>
-  <label><input type="radio" name="plan" value="bottomup"> Bottom-up (illustrative)</label>
-  <label><input type="radio" name="plan" value="v16"> v16 — ED deconcentration (illustrative)</label>
+  <label><input type="radio" name="plan" value="v16"> Illustrative scenario (reduces concentrated disadvantage)</label>
 
   <h2>Level</h2>
   <label><input type="radio" name="level" value="es" checked> Elementary</label>
@@ -68,12 +67,8 @@
 
   <h2>Diff comparison</h2>
   <label><input type="radio" name="diff" value="auto" checked> Auto (vs. current)</label>
-  <label><input type="radio" name="diff" value="pre_to_ed_first"> current → ED-first</label>
-  <label><input type="radio" name="diff" value="s14_to_ed_first"> Scenario 14 → ED-first</label>
-  <label><input type="radio" name="diff" value="pre_to_bu"> current → bottom-up</label>
-  <label><input type="radio" name="diff" value="s14_to_bu"> Scenario 14 → bottom-up</label>
-  <label><input type="radio" name="diff" value="pre_to_v16"> current → v16</label>
-  <label><input type="radio" name="diff" value="s14_to_v16"> Scenario 14 → v16</label>
+  <label><input type="radio" name="diff" value="pre_to_v16"> current → illustrative scenario</label>
+  <label><input type="radio" name="diff" value="s14_to_v16"> Scenario 14 → illustrative scenario</label>
   <label><input type="radio" name="diff" value="pre_to_s14"> current → Scenario 14</label>
 
   <hr>
@@ -145,9 +140,7 @@ function resolveDiffPair() {
   if (sel !== 'auto') return sel;
   const plan = getPlan();
   if (plan === 'scenario14') return 'pre_to_s14';
-  if (plan === 'bottomup') return 'pre_to_bu';
   if (plan === 'v16') return 'pre_to_v16';
-  if (plan === 'ed_first') return 'pre_to_ed_first';
   return null;
 }
 
@@ -240,8 +233,7 @@ function refresh() {
       .replace('_to_', ' → ')
       .replace('s14', 'Scenario 14')
       .replace('pre', 'current')
-      .replace('ed_first', 'ED-first')
-      .replace('bu', 'bottom-up');
+      .replace('v16', 'illustrative scenario');
     meta.textContent = `Showing: ${label}`;
   }
 }

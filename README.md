@@ -13,8 +13,9 @@ boundaries for adoption.
 
 - **Current boundaries** — Austin ISD's existing attendance zones (pre-redraw).
 - **Scenario 14** — Austin ISD's own draft redraw.
-- **ED-first**, **Bottom-up**, **v16** — illustrative scenarios that prioritize
-  reducing concentrated economic disadvantage, used to test what is achievable.
+- **Illustrative scenario** — an analytical example that prioritizes reducing
+  concentrated economic disadvantage, used to show what is achievable. It is an
+  existence proof, not a proposed boundary plan.
 
 The map can highlight which block groups change between any two sets.
 
