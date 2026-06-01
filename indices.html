@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Austin ISD — Segregation & Economic-Concentration Indices</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root { --red:#960000; --ink:#1a1a1a; --muted:#666; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    color:var(--ink); max-width:880px; margin:0 auto; padding:28px 20px 60px; line-height:1.5; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  h2 { font-size:16px; text-transform:uppercase; letter-spacing:.4px; color:var(--red);
+    margin:30px 0 8px; }
+  nav { font-size:13px; margin-bottom:18px; }
+  nav a { color:var(--red); text-decoration:none; font-weight:600; }
+  .disclaimer { font-size:12.5px; color:#7a3b3b; background:#fbf1ef; border:1px solid #e8d4cf;
+    border-radius:5px; padding:10px 12px; margin:12px 0 4px; }
+  table { border-collapse:collapse; width:100%; font-size:13.5px; margin-top:4px; }
+  th,td { padding:7px 10px; border-bottom:1px solid #e4e4e4; text-align:left; }
+  thead th { background:#fafafa; border-bottom:2px solid #ccc; font-size:12.5px; vertical-align:bottom; }
+  th:not(:first-child), td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  td.metric { color:#333; }
+  td.num.best { font-weight:700; color:var(--red); }
+  .dir { color:#aaa; font-size:11px; }
+  .sub { font-weight:400; color:var(--muted); font-size:11px; }
+  .legend { font-size:12px; color:var(--muted); margin-top:18px; }
+  footer { font-size:11.5px; color:var(--muted); margin-top:28px; border-top:1px solid #e4e4e4; padding-top:12px; }
+</style>
+</head>
+<body>
+  <nav>&larr; <a href="index.html">Interactive boundary map</a></nav>
+  <h1>Segregation &amp; economic-concentration indices</h1>
+  <p style="color:var(--muted);font-size:14px;margin:2px 0 0;">Austin ISD, by school level — current boundaries vs. AISD's draft redraw (Scenario&nbsp;14) vs. an illustrative deconcentration scenario.</p>
+
+  <div class="disclaimer">
+    <strong>Illustrative scenario — not a proposed map.</strong>
+    The illustrative column is an analytical example of what is achievable, not a
+    boundary plan being advocated for adoption. <em>Current</em> reflects AISD's
+    actual 2024–25 enrollment; the scenario columns model residential demographics
+    under redrawn boundaries, so real enrollment effects would differ (and, per
+    prior analysis, actual segregation tends to run somewhat higher than the
+    residential model shows).
+  </div>
+
+  
+    <h2>Elementary</h2>
+    <table>
+      <thead><tr><th>Metric</th><th>Current</th><th>Scenario&nbsp;14<br><span class="sub">AISD draft</span></th><th>Illustrative<br><span class="sub">scenario</span></th></tr></thead>
+      <tbody><tr><td class="metric">Dissimilarity Index — Black/White <span class="dir" title="lower is better">▼</span></td><td class="num">66.8%</td><td class="num">59.2%</td><td class="num best">54.1%</td></tr><tr><td class="metric">Dissimilarity Index — Hispanic/White <span class="dir" title="lower is better">▼</span></td><td class="num">61.0%</td><td class="num">53.6%</td><td class="num best">51.4%</td></tr><tr><td class="metric">Typical Black student's exposure to White peers <span class="dir" title="higher is better">▲</span></td><td class="num">19.1%</td><td class="num">26.4%</td><td class="num best">28.4%</td></tr><tr><td class="metric">Typical Hispanic student's exposure to White peers <span class="dir" title="higher is better">▲</span></td><td class="num">20.8%</td><td class="num">26.2%</td><td class="num best">27.1%</td></tr><tr><td class="metric">Typical low-income student's share of low-income peers <span class="dir" title="lower is better">▼</span></td><td class="num best">64.8%</td><td class="num">69.1%</td><td class="num">67.7%</td></tr><tr><td class="metric">Schools over 75% economically disadvantaged <span class="dir" title="lower is better">▼</span></td><td class="num">11</td><td class="num">11</td><td class="num best">8</td></tr><tr><td class="metric">Schools over 50% economically disadvantaged <span class="dir" title="lower is better">▼</span></td><td class="num">31</td><td class="num best">20</td><td class="num">21</td></tr><tr><td class="metric">Schools at or below 25% ED (low-poverty) <span class="dir" title="higher is better">▲</span></td><td class="num">16</td><td class="num">29</td><td class="num best">30</td></tr></tbody>
+    </table>
+    <h2>Middle school</h2>
+    <table>
+      <thead><tr><th>Metric</th><th>Current</th><th>Scenario&nbsp;14<br><span class="sub">AISD draft</span></th><th>Illustrative<br><span class="sub">scenario</span></th></tr></thead>
+      <tbody><tr><td class="metric">Dissimilarity Index — Black/White <span class="dir" title="lower is better">▼</span></td><td class="num">47.3%</td><td class="num">52.4%</td><td class="num best">45.8%</td></tr><tr><td class="metric">Dissimilarity Index — Hispanic/White <span class="dir" title="lower is better">▼</span></td><td class="num best">44.5%</td><td class="num">48.8%</td><td class="num">48.2%</td></tr><tr><td class="metric">Typical Black student's exposure to White peers <span class="dir" title="higher is better">▲</span></td><td class="num best">32.8%</td><td class="num">26.9%</td><td class="num">30.3%</td></tr><tr><td class="metric">Typical Hispanic student's exposure to White peers <span class="dir" title="higher is better">▲</span></td><td class="num best">31.5%</td><td class="num">28.5%</td><td class="num">29.5%</td></tr><tr><td class="metric">Typical low-income student's share of low-income peers <span class="dir" title="lower is better">▼</span></td><td class="num">59.8%</td><td class="num">57.6%</td><td class="num best">52.0%</td></tr><tr><td class="metric">Schools over 75% economically disadvantaged <span class="dir" title="lower is better">▼</span></td><td class="num">3</td><td class="num">2</td><td class="num best">1</td></tr><tr><td class="metric">Schools over 50% economically disadvantaged <span class="dir" title="lower is better">▼</span></td><td class="num best">6</td><td class="num best">6</td><td class="num best">6</td></tr><tr><td class="metric">Schools at or below 25% ED (low-poverty) <span class="dir" title="higher is better">▲</span></td><td class="num">4</td><td class="num best">6</td><td class="num best">6</td></tr></tbody>
+    </table>
+    <h2>High school</h2>
+    <table>
+      <thead><tr><th>Metric</th><th>Current</th><th>Scenario&nbsp;14<br><span class="sub">AISD draft</span></th><th>Illustrative<br><span class="sub">scenario</span></th></tr></thead>
+      <tbody><tr><td class="metric">Dissimilarity Index — Black/White <span class="dir" title="lower is better">▼</span></td><td class="num">58.5%</td><td class="num">51.0%</td><td class="num best">37.0%</td></tr><tr><td class="metric">Dissimilarity Index — Hispanic/White <span class="dir" title="lower is better">▼</span></td><td class="num">58.6%</td><td class="num">48.2%</td><td class="num best">34.4%</td></tr><tr><td class="metric">Typical Black student's exposure to White peers <span class="dir" title="higher is better">▲</span></td><td class="num">22.0%</td><td class="num">27.8%</td><td class="num best">30.3%</td></tr><tr><td class="metric">Typical Hispanic student's exposure to White peers <span class="dir" title="higher is better">▲</span></td><td class="num">23.0%</td><td class="num">29.0%</td><td class="num best">32.8%</td></tr><tr><td class="metric">Typical low-income student's share of low-income peers <span class="dir" title="lower is better">▼</span></td><td class="num">71.0%</td><td class="num">70.4%</td><td class="num best">62.2%</td></tr><tr><td class="metric">Schools over 75% economically disadvantaged <span class="dir" title="lower is better">▼</span></td><td class="num">5</td><td class="num">4</td><td class="num best">3</td></tr><tr><td class="metric">Schools over 50% economically disadvantaged <span class="dir" title="lower is better">▼</span></td><td class="num">7</td><td class="num best">4</td><td class="num best">4</td></tr><tr><td class="metric">Schools at or below 25% ED (low-poverty) <span class="dir" title="higher is better">▲</span></td><td class="num">2</td><td class="num">3</td><td class="num best">4</td></tr></tbody>
+    </table>
+
+  <p class="legend">
+    <strong>▼</strong> lower is better (less segregation / less concentration) &nbsp;·&nbsp;
+    <strong>▲</strong> higher is better (more cross-group exposure / more low-poverty schools).
+    Best value in each row is shown in <span style="color:var(--red);font-weight:700;">red</span>.<br>
+    <strong>Dissimilarity Index</strong> = % of one group that would need to change schools to be evenly distributed (0 = fully even, 100 = complete separation).
+    <strong>Exposure</strong> = the share of a typical student's schoolmates from another group.
+  </p>
+
+  <footer>
+    Texas Appleseed analysis. Data: Austin ISD attendance-boundary shapefiles,
+    U.S. Census ACS 2018–22, Texas Education Agency 2024–25. Magnet schools held
+    at current composition in the illustrative scenario.
+  </footer>
+</body>
+</html>
