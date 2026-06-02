@@ -39,15 +39,19 @@
 <div id="panel">
   <h1>AISD Attendance Boundaries</h1>
   <div class="disclaimer">
-    <strong>Austin ISD's own boundary sets.</strong>
-    This compares AISD's current attendance zones with its draft redraw
-    (Scenario&nbsp;14) — both AISD's own data, shown for comparison.
+    <strong>Illustrative scenario — not a proposed map.</strong>
+    The illustrative scenario shows what's achievable by redrawing zones to reduce
+    concentrated economic disadvantage (keeping schools contiguous, within 37–123%
+    capacity, feeders mostly intact). It's an existence proof for a policy
+    conversation, not a boundary plan being advocated. "Current" and "Scenario&nbsp;14"
+    are Austin ISD's own boundary sets.
   </div>
-  <p class="meta">AISD attendance-boundary shapefiles; ACS 2018–22; TEA 2024–25.</p>
+  <p class="meta">AISD shapefiles; ACS 2018–22; TEA 2024–25.</p>
 
   <h2>Boundary set</h2>
   <label><input type="radio" name="plan" value="pre" checked> Current boundaries</label>
   <label><input type="radio" name="plan" value="scenario14"> Scenario 14 (AISD's draft redraw)</label>
+  <label><input type="radio" name="plan" value="v19"> Illustrative scenario (reduces concentrated disadvantage)</label>
 
   <h2>Level</h2>
   <label><input type="radio" name="level" value="es" checked> Elementary</label>
@@ -64,6 +68,8 @@
 
   <h2>Diff comparison</h2>
   <label><input type="radio" name="diff" value="auto" checked> Auto (vs. current)</label>
+  <label><input type="radio" name="diff" value="pre_to_v19"> current → illustrative scenario</label>
+  <label><input type="radio" name="diff" value="s14_to_v19"> Scenario 14 → illustrative scenario</label>
   <label><input type="radio" name="diff" value="pre_to_s14"> current → Scenario 14</label>
 
   <hr>
@@ -138,6 +144,7 @@ function resolveDiffPair() {
   if (sel !== 'auto') return sel;
   const plan = getPlan();
   if (plan === 'scenario14') return 'pre_to_s14';
+  if (plan === 'v19') return 'pre_to_v19';
   return null;
 }
 
