@@ -39,19 +39,15 @@
 <div id="panel">
   <h1>AISD Attendance Boundaries</h1>
   <div class="disclaimer">
-    <strong>Illustrative scenario — not a proposed map.</strong>
-    The deconcentration scenario shown here is an analytical example of what is
-    achievable — an existence proof for a policy conversation, not a boundary plan
-    being advocated for adoption. "Current" and "Scenario 14" are Austin ISD's own
-    boundary sets, shown for comparison.
+    <strong>Austin ISD's own boundary sets.</strong>
+    This compares AISD's current attendance zones with its draft redraw
+    (Scenario&nbsp;14) — both AISD's own data, shown for comparison.
   </div>
-  <p class="meta">Analysis using AISD shapefiles, ACS 2018–22, and TEA 2024–25 data.</p>
-  <p class="meta"><a href="indices.html" style="color:#960000;font-weight:600;text-decoration:none;">→ Data tables: segregation &amp; poverty indices</a></p>
+  <p class="meta">AISD attendance-boundary shapefiles; ACS 2018–22; TEA 2024–25.</p>
 
   <h2>Boundary set</h2>
   <label><input type="radio" name="plan" value="pre" checked> Current boundaries</label>
   <label><input type="radio" name="plan" value="scenario14"> Scenario 14 (AISD's draft redraw)</label>
-  <label><input type="radio" name="plan" value="v16"> Illustrative scenario (reduces concentrated disadvantage)</label>
 
   <h2>Level</h2>
   <label><input type="radio" name="level" value="es" checked> Elementary</label>
@@ -68,8 +64,6 @@
 
   <h2>Diff comparison</h2>
   <label><input type="radio" name="diff" value="auto" checked> Auto (vs. current)</label>
-  <label><input type="radio" name="diff" value="pre_to_v16"> current → illustrative scenario</label>
-  <label><input type="radio" name="diff" value="s14_to_v16"> Scenario 14 → illustrative scenario</label>
   <label><input type="radio" name="diff" value="pre_to_s14"> current → Scenario 14</label>
 
   <hr>
@@ -144,7 +138,6 @@ function resolveDiffPair() {
   if (sel !== 'auto') return sel;
   const plan = getPlan();
   if (plan === 'scenario14') return 'pre_to_s14';
-  if (plan === 'v16') return 'pre_to_v16';
   return null;
 }
 
