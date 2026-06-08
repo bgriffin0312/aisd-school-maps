@@ -12,9 +12,10 @@ boundaries for adoption.
 ## Boundary sets included
 
 - **Current boundaries** — Austin ISD's existing attendance zones (pre-redraw).
-- **Scenario 14** — Austin ISD's own draft redraw.
+- **Oak** and **Elm** — Austin ISD's own June 2026 draft scenarios.
 - **Illustrative scenario** — an analytical example that prioritizes reducing
-  concentrated economic disadvantage, used to show what is achievable. It is an
+  concentrated economic disadvantage (on AISD's published building capacities,
+  with a compactness constraint), used to show what is achievable. It is an
   existence proof, not a proposed boundary plan.
 
 The map can highlight which block groups change between any two sets.

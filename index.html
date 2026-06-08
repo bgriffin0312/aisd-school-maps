@@ -45,15 +45,16 @@
     capacities, keeping schools contiguous, within 37–123% capacity, and with a
     compactness constraint so zones stay as tidy as the district's own drafts.
     It's an existence proof for a policy conversation, not a boundary plan being
-    advocated. "Current" and "Scenario&nbsp;14" are Austin ISD's own boundary sets.
+    advocated. "Current", "Oak", and "Elm" are Austin ISD's own boundary sets —
+    Oak and Elm are its June 2026 draft scenarios.
   </div>
   <p class="meta">AISD shapefiles; ACS 2018–22; TEA 2024–25.</p>
-  <p class="meta"><a href="indices.html" style="color:#960000;font-weight:600;text-decoration:none;">→ Data tables: segregation, ED concentration &amp; move burden</a></p>
-  <p class="meta"><a href="scenarios_oak_elm.html" style="color:#960000;font-weight:600;text-decoration:none;">→ AISD’s Oak &amp; Elm scenarios: segregation, exposure &amp; utilization</a></p>
+  <p class="meta"><a href="scenarios_oak_elm.html" style="color:#960000;font-weight:600;text-decoration:none;">→ Data tables: segregation, exposure, ED concentration &amp; move burden</a></p>
 
   <h2>Boundary set</h2>
   <label><input type="radio" name="plan" value="pre" checked> Current boundaries</label>
-  <label><input type="radio" name="plan" value="scenario14"> Scenario 14 (AISD's draft redraw)</label>
+  <label><input type="radio" name="plan" value="oak"> Oak (AISD draft scenario)</label>
+  <label><input type="radio" name="plan" value="elm"> Elm (AISD draft scenario)</label>
   <label><input type="radio" name="plan" value="compact"> Illustrative scenario (reduces concentrated disadvantage, compact)</label>
 
   <h2>Level</h2>
@@ -71,9 +72,11 @@
 
   <h2>Diff comparison</h2>
   <label><input type="radio" name="diff" value="auto" checked> Auto (vs. current)</label>
-  <label><input type="radio" name="diff" value="pre_to_compact"> current → illustrative scenario</label>
-  <label><input type="radio" name="diff" value="s14_to_compact"> Scenario 14 → illustrative scenario</label>
-  <label><input type="radio" name="diff" value="pre_to_s14"> current → Scenario 14</label>
+  <label><input type="radio" name="diff" value="pre_to_oak"> current → Oak</label>
+  <label><input type="radio" name="diff" value="pre_to_elm"> current → Elm</label>
+  <label><input type="radio" name="diff" value="pre_to_compact"> current → illustrative</label>
+  <label><input type="radio" name="diff" value="oak_to_compact"> Oak → illustrative</label>
+  <label><input type="radio" name="diff" value="elm_to_compact"> Elm → illustrative</label>
 
   <hr>
   <h2>Legend</h2>
@@ -146,7 +149,8 @@ function resolveDiffPair() {
   const sel = getDiffPair();
   if (sel !== 'auto') return sel;
   const plan = getPlan();
-  if (plan === 'scenario14') return 'pre_to_s14';
+  if (plan === 'oak') return 'pre_to_oak';
+  if (plan === 'elm') return 'pre_to_elm';
   if (plan === 'compact') return 'pre_to_compact';
   return null;
 }
@@ -238,9 +242,10 @@ function refresh() {
   } else {
     const label = pair
       .replace('_to_', ' → ')
-      .replace('s14', 'Scenario 14')
       .replace('pre', 'current')
-      .replace('compact', 'illustrative scenario');
+      .replace('compact', 'illustrative scenario')
+      .replace('oak', 'Oak')
+      .replace('elm', 'Elm');
     meta.textContent = `Showing: ${label}`;
   }
 }
